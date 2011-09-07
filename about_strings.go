@@ -7,7 +7,7 @@ import "fmt"
 func TestDoubleQuotedStringsAreStrings(t *koans.T) {
 	str := "hello" //String can be defined with literal
 
-	t.AssertEquals(koans.String__, str)
+	t.AssertEquals("hello", str)
 }
 
 func TestBackQuotedStringsAreStrings(t *koans.T) {
