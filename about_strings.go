@@ -69,13 +69,13 @@ func TestCharactersAreBytesActually(t *koans.T) {
 
 func TestStringsCanBeSplit(t *koans.T) {
 	str := "Sausage Egg Cheese"
-	words := strings.Split(str, " ", -1)
+	words := strings.Split(str, " ")
 	t.AssertEqualsStringSlices(koans.StringSlice__, words)
 }
 
 func TestStringsCanBeSplitWithDifferentPatterns(t *koans.T) {
 	str := "the,|;rain;in,spain"
-	words := strings.Split(str, ",|;", -1)
+	words := strings.Split(str, ",|;")
 
 
 	t.AssertEqualsStringSlices(koans.StringSlice__, words)
