@@ -11,31 +11,32 @@ func TestDoubleQuotedStringsAreStrings(t *koans.T) {
 }
 
 func TestBackQuotedStringsAreStrings(t *koans.T) {
+     // CHEN apparently everything is literal
 	str := `hello\n
 world`
 
-	t.AssertEquals(koans.Int__, len(str))
+	t.AssertEquals(13, len(str))
 }
 
 func TestPlusConcatenatesString(t *koans.T) {
 	str := "Hello " + "World"
-	t.AssertEquals(koans.String__, str)
+	t.AssertEquals("Hello World", str)
 }
 
 func TestPlusWillNotModifyOriginalStrings(t *koans.T) {
     hi := "Hello, "
 	there := "world"
 	str := hi + there
-	t.AssertEquals(koans.String__, hi)
-	t.AssertEquals(koans.String__, there)
-	t.AssertEquals(koans.String__, str)
+	t.AssertEquals("Hello, ", hi)
+	t.AssertEquals("world", there)
+	t.AssertEquals("Hello, world", str)
 }
 
 func TestPlusEqualsWillAppendToEndOfString(t *koans.T) {
 	hi := "Hello, "
 	there := "world"
 	hi += there
-	t.AssertEquals(koans.String__, hi)
+	t.AssertEquals("Hello, world", hi)
 }
 
 func TestPlusEqualsAlsoLeavesOriginalStringUnmodified(t *koans.T) {
@@ -43,7 +44,7 @@ func TestPlusEqualsAlsoLeavesOriginalStringUnmodified(t *koans.T) {
 	hi := original
 	there := "world"
 	hi += there
-	t.AssertEquals(koans.String__, original)
+	t.AssertEquals("Hello, ", original)
 }
 
 func TestUseSprintfToInterpolateVaribales(t *koans.T) {

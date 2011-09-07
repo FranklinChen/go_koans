@@ -10,6 +10,6 @@ func TestCreatingMap(t *koans.T) {
 		"MST": -7 * 60 * 60,
 		"PST": -8 * 60 * 60,
 	}
-	t.AssertTrue(koans.Int__ == len(timeZone))
-	t.AssertTrue(koans.Int__ == timeZone["UTC"])
+	t.AssertTrue(5 == len(timeZone))
+	t.AssertTrue(0 == timeZone["UTC"])
 }
