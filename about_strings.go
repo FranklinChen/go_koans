@@ -24,7 +24,7 @@ func TestPlusConcatenatesString(t *koans.T) {
 }
 
 func TestPlusWillNotModifyOriginalStrings(t *koans.T) {
-    hi := "Hello, "
+	hi := "Hello, "
 	there := "world"
 	str := hi + there
 	t.AssertEquals("Hello, ", hi)
@@ -65,7 +65,7 @@ func TestYouCanGetASingleCharacterFromAString(t *koans.T) {
 }
 
 func TestCharactersAreBytesActually(t *koans.T) {
-	t.AssertTrue(koans.Char__ == 'a' + 1)
+	t.AssertTrue(koans.Char__ == 'a'+1)
 }
 
 func TestStringsCanBeSplit(t *koans.T) {
@@ -77,8 +77,5 @@ func TestStringsCanBeSplit(t *koans.T) {
 func TestStringsCanBeSplitWithDifferentPatterns(t *koans.T) {
 	str := "the,|;rain;in,spain"
 	words := strings.Split(str, ",|;")
-
-
 	t.AssertEqualsStringSlices(koans.StringSlice__, words)
 }
-
